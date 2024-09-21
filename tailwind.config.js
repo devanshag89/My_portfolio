@@ -17,7 +17,18 @@ module.exports = {
 				'primary-dark': '#0D2438',
 				'secondary-dark': '#102D44',
 				'ternary-dark': '#1E3851',
+				'neon-blue-start': '#1B9CFC',
+				'neon-blue-end': '#55E6C1',
+				'card-start': '#901707',
+				'card-end' : '#865701',
+				'border-blue': '#052af8',
+				'border-pink': '#fd05a2',
+		
 			},
+			backgroundImage: theme => ({
+				'neon-blue-gradient': 'linear-gradient(90deg, #1B9CFC 0%, #55E6C1 100%)',
+			}),
+		
 			container: {
 				padding: {
 					DEFAULT: '1rem',
@@ -27,6 +38,7 @@ module.exports = {
 					'2xl': '8rem',
 				},
 			},
+	  
     },
   },
   variants: {

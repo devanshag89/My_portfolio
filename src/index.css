@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient-name {
+    background: linear-gradient(to right, #052af8 0%, #fd05a2 100%); /* Replace with your gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.gradient-hello {
+    background: linear-gradient(to right,#b80682 0%, #2d06ba 100%); /* Replace with your gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.gradient-heading {
+    background: linear-gradient(to right, #901707 0%, #865701 100%); /* Replace with your gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+

@@ -1,32 +1,27 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./App.css";
-import About from "./Partials/About";
-import Card from "./Partials/card";
-import Footer from "./Partials/Footer";
-import Projects from "./Partials/Projects";
-import Skills from "./Partials/Skills";
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import Home from "./Partials/Home";
 import data from "./assets/data";
+import student from "./assets/student";
+import About from "./Partials/About";
+import Project from "./Partials/Project";
+import Skill from "./Partials/Skill";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+
+
 
 function App() {
-  useEffect(() => {
-    AOS.init({
-      once: true,
-    });
-  });
   return (
-    <div className="min-h-screen py-10 px-3 sm:px-5 bg-yellow-100">
-      <div data-aos="fade-down" data-aos-duration="800">
-        <Card name={data.name} title={data.title} social={data.social} />
-      </div>
-      <div data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
-        <About title={data.about.title} description={data.about.description} />
-        <Skills skills={data.skills} />
-        <Projects projects={data.projects} />
-        <Footer github={data.social.github} />
-      </div>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home data={data}/>}/>
+          <Route path="/about" element={<About data={data} student={student}/>}/>
+          <Route path="/projects" element={<Project data={data}/>}/>
+          <Route path="/skills" element={<Skill data={data} />}/>
+        </Routes>
+      </Router>
     </div>
   );
 }
