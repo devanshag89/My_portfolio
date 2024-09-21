@@ -9,8 +9,6 @@ import Header from "./Header";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import  background from "../images/background.webp";
-import  back from "../images/back.webp";
-import  back1 from "../images/741658.jpg";
 import SuccessModal from "./SuccessModal";
 
 function Home({data}) {

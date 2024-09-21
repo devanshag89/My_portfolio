@@ -1,12 +1,11 @@
 import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
 import GitHubButton from "react-github-btn";
 
 const ProjectCard = ({ project: { title, image, description, tags, link } }) => {
   return (
     <div className="w-80 h-auto my-4 transition-all duration-700 hover:scale-110">
       <div className="bg-transparent shadow-lg shadow-border-blue  hover:shadow-2xl border-4 border-border-blue rounded-lg dark:bg-gray-800 dark:border-gray-700 h-full flex flex-col justify-between">
-        <a href="#">
+        <a href={link}>
           <img
             className="rounded-t-lg w-full h-48 object-cover"
             src={image}
@@ -14,7 +13,7 @@ const ProjectCard = ({ project: { title, image, description, tags, link } }) => 
           />
         </a>
         <div className="p-5 flex flex-col flex-grow">
-          <a href="#">
+          <a href={link}>
             <h5 className="text-white font-bold text-xl tracking-tight mb-2 dark:text-white">
               {title}
             </h5>
